@@ -1,0 +1,56 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+
+<head>
+  <meta charset="UTF-8" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/> 
+  <title>Login / Register | CelerFect</title> 
+  <link rel="stylesheet" href="login.css"> 
+</head>
+
+<body>
+
+  <div class="form-container"> 
+
+    <div class="form-toggle"> 
+      <button id="loginBtn" class="active">Login</button> 
+      <button id="registerBtn">Register</button> 
+    </div>
+
+    
+    <form id="loginForm" class="active"> 
+      <label for="loginEmail">Email</label> 
+      <input type="email" id="loginEmail" placeholder="Enter your email" required /> 
+
+      <label for="loginPassword">Password</label> 
+      <input type="password" id="loginPassword" placeholder="Enter your password" required /> 
+
+      <button type="submit" class="submit-btn">Login</button> 
+    </form>
+
+  
+    <form id="registerForm"> 
+      <label for="regName">Full Name</label> 
+      <input type="text" id="regName" placeholder="Enter your name" required /> 
+
+      <label for="regEmail">Email</label> 
+      <input type="email" id="regEmail" placeholder="Enter your email" required /> 
+
+      <label for="regPassword">Password</label> 
+      <input type="password" id="regPassword" placeholder="Create a password" required /> 
+
+      <label for="regPhone">Phone</label> 
+      <input type="tel" id="regPhone" placeholder="(e.g. 0912xxxxxxx)" /> 
+
+      <button type="submit" class="submit-btn">Register</button> 
+    </form>
+
+    <div class="note"> 
+      <p>Use your account to book amazing events with CelerFect!</p> 
+    </div>
+
+  </div>
+
+  <script src="login.js"></script> 
+</body>
+</html>

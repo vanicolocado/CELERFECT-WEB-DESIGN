@@ -1,0 +1,155 @@
+/* Body and background */
+body {
+  position: relative; /* Allows positioning child elements relative to the body */
+  margin: 0; /* Remove default margin around the page */
+  font-family: Arial, sans-serif; /* Use Arial or fallback to sans-serif fonts */
+  background-image: url('navbg.png'); /* Set background image */
+  background-size: cover; /* Make background cover entire area without stretching */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Prevent background image from repeating */
+  color: white; /* Default text color to white */
+  min-height: 100vh; /* Ensure body is at least full viewport height */
+  display: flex; /* Use flexbox layout */
+  flex-direction: column; /* Arrange children vertically */
+  z-index: 0; /* Base stacking order */
+}
+
+/* Dark overlay on background image */
+body::before {
+  content: ""; /* Insert an empty element */
+  position: fixed; /* Fix overlay position relative to viewport */
+  top: 0; left: 0; /* Position at top-left corner */
+  width: 100vw; /* Full viewport width */
+  height: 100vh; /* Full viewport height */
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+  z-index: -1; /* Place overlay behind other content */
+  pointer-events: none; /* Allow clicks to pass through */
+}
+
+/* Navigation container styles */
+.NavigationContainer {
+  display: flex; /* Arrange nav items horizontally */
+  flex-wrap: wrap; /* Allow nav items to wrap on small screens */
+  gap: 20px; /* Space between nav items */
+  align-items: center; /* Vertically center nav items */
+  padding: 10px 50px; /* Add space inside container */
+  background-color: rgba(0, 0, 0, 0.3); /* Slight transparent black background */
+  position: relative; /* Position relative for layering */
+  z-index: 1; /* Above body overlay */
+}
+
+/* Links inside navigation */
+.NavigationContainer a {
+  color: white; /* White text for links */
+  text-decoration: none; /* Remove underline */
+  padding: 5px 10px; /* Space inside each link */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s, color 0.3s; /* Smooth color change on hover */
+  display: flex; /* Flex for content alignment */
+  align-items: center; /* Vertically center link content */
+  justify-content: center; /* Horizontally center link content */
+}
+
+/* Hover effect for nav links */
+.NavigationContainer a:hover {
+  background-color: rgba(255, 204, 0, 0.7); /* Yellow background with transparency */
+  color: black; /* Change text to black on hover */
+  text-decoration: underline; /* Underline text on hover */
+}
+
+/* Special styling for register button/link */
+#register {
+  margin-left: auto; /* Push to the far right */
+  color: white; /* White text */
+  border-radius: 5px; /* Rounded corners */
+  padding-right: 30px; /* Extra padding on right side */
+  height: 30px; /* Fixed height */
+  display: flex; /* Flex container */
+  align-items: center; /* Vertically center content */
+}
+
+/* Header styles */
+header {
+  padding: 20px 15px; /* Space inside header */
+  text-align: center; /* Center the text */
+  font-weight: 700; /* Bold font */
+  text-transform: uppercase; /* Uppercase letters */
+  letter-spacing: 2px; /* Space between letters */
+  z-index: 1; /* Above overlay */
+  color: white; /* White text color */
+  text-shadow: 2px 2px 5px #d3ab0c; /* Shadow behind text for emphasis */
+}
+
+/* Inquiry section with white background */
+.inquiry-section {
+  background: white; /* White background */
+  color: black; /* Black text */
+  max-width: 600px; /* Max width to keep form narrow */
+  margin: 40px auto; /* Center horizontally with vertical margin */
+  padding: 30px 40px; /* Space inside container */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3); /* Subtle shadow around section */
+  z-index: 2; /* Above overlay and nav */
+  position: relative; /* Position relative for stacking */
+}
+
+/* Inquiry section heading */
+.inquiry-section h2 {
+  margin-top: 0; /* Remove top margin */
+}
+
+/* Labels inside inquiry section */
+.inquiry-section label {
+  display: block; /* Each label on its own line */
+  margin-top: 15px; /* Space above each label */
+  font-weight: bold; /* Bold text */
+}
+
+/* Form inputs, selects, and textareas */
+.inquiry-section input,
+.inquiry-section select,
+.inquiry-section textarea {
+  width: 100%; /* Full width of container */
+  padding: 10px; /* Space inside fields */
+  margin-top: 6px; /* Small space above fields */
+  border: 1px solid #ccc; /* Light gray border */
+  border-radius: 6px; /* Rounded corners */
+  font-size: 1rem; /* Normal font size */
+  box-sizing: border-box; /* Include padding in width calculation */
+  resize: vertical; /* Allow vertical resizing for textarea */
+}
+
+/* Submit button inside inquiry section */
+.inquiry-section button {
+  margin-top: 20px; /* Space above button */
+  background-color: #ffcc00; /* Yellow background */
+  color: black; /* Black text */
+  border: none; /* Remove border */
+  padding: 12px 20px; /* Space inside button */
+  font-weight: bold; /* Bold text */
+  font-size: 1.1rem; /* Slightly bigger font */
+  border-radius: 6px; /* Rounded corners */
+  cursor: pointer; /* Cursor changes to pointer on hover */
+  transition: background-color 0.3s ease; /* Smooth color change */
+  width: 100%; /* Full width button */
+}
+
+/* Hover effect for submit button */
+.inquiry-section button:hover {
+  background-color: #e6b800; /* Darker yellow on hover */
+}
+
+/* Class for marking required fields */
+.required {
+  color: red; /* Red color to highlight required */
+}
+
+/* Footer styles */
+footer {
+  text-align: center; /* Center the footer text */
+  padding: 15px 10px; /* Space inside footer */
+  background-color: rgba(0, 0, 0, 0.3); /* Transparent black background */
+  color: white; /* White text */
+  margin-top: auto; /* Push footer to bottom in flex layout */
+  font-size: 0.9rem; /* Smaller font size */
+}

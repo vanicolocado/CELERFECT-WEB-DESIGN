@@ -1,0 +1,79 @@
+<!DOCTYPE html> <!-- Declares the document type and HTML version -->
+<html lang="en"> <!-- Start of HTML document, sets language to English -->
+<head>
+  <meta charset="UTF-8" /> <!-- Character encoding -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> <!-- Responsive design meta tag -->
+  <title>Inquire | CelerFect</title> <!-- Page title displayed on browser tab -->
+  <link rel="stylesheet" href="inquire.css" /> <!-- Link to external CSS file -->
+</head>
+
+<body> <!-- Start of the visible body content -->
+
+  <!-- Navigation bar -->
+  <div class="NavigationContainer">
+    <!-- Navigation item: Home -->
+    <div id="home"><a href="FINAL PROJECT.html">Home</a></div>
+    <!-- Navigation item: Inquire -->
+    <div id="inquire"><a href="inquire.html">Inquire</a></div>
+    <!-- Navigation item: Venues -->
+    <div id="venues"><a href="venue2.html">Venues</a></div>
+    <!-- Navigation item: Book Now -->
+    <div id="booknow"><a href="Book Now.html">Book Now</a></div>
+    <!-- Navigation item: Login/Register -->
+    <div id="register"><a href="login.html">Login/Register</a></div>
+  </div>
+
+  <!-- Page header -->
+  <header>
+    <h1>CelerFect - Inquire About Your Event</h1> <!-- Main heading for the page -->
+  </header>
+
+  <main> <!-- Main content section -->
+    <section class="inquiry-section"> <!-- Section for inquiry form -->
+      <h2>Have Questions? We're Here to Help!</h2> <!-- Subheading -->
+      <p>Please fill out the form below and we'll get back to you shortly.</p> <!-- Instructional paragraph -->
+
+      <!-- Start of the form -->
+      <form id="inquiryForm">
+        <!-- Full Name input field -->
+        <label for="name">Full Name <span class="required">*</span></label>
+        <input type="text" id="name" name="name" placeholder="Your full name" required />
+
+        <!-- Email input field -->
+        <label for="email">Email <span class="required">*</span></label>
+        <input type="email" id="email" name="email" placeholder="you@example.com" required />
+
+        <!-- Phone number input field (optional) -->
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" placeholder="Optional" />
+
+        <!-- Dropdown for selecting event type -->
+        <label for="eventType">Event Type</label>
+        <select id="eventType" name="eventType">
+          <option value="">-- Please select --</option> <!-- Default unselected option -->
+          <option value="wedding">Reception Hall</option>
+          <option value="birthday">Birthday Party</option>
+          <option value="corporate">Corporate Event</option>
+          <option value="engagement">Engagement</option>
+          <option value="other">Other</option>
+        </select>
+
+        <!-- Message box -->
+        <label for="message">Your Question or Message <span class="required">*</span></label>
+        <textarea id="message" name="message" rows="5" placeholder="Write your inquiry here..." required></textarea>
+
+        <!-- Submit button -->
+        <button type="submit">Submit Inquiry</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Footer with copyright -->
+  <footer>
+    <p>&copy; 2023 CelerFect. All rights reserved.</p>
+  </footer>
+
+  <script src="inquire.js"></script> 
+
+</body>
+</html>

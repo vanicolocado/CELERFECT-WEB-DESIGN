@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Planner | Book Your Event</title>
+    <link rel="stylesheet" href="Book Now.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header></header>
+
+    <div class="NavigationContainer">
+      <div id="home"><a href="FINAL PROJECT.html">Home</a></div>
+      <div id="inquire"><a href="inquire.html">Inquire</a></div>
+      <div id="venues"><a href="venue2.html">Venues</a></div>
+      <div id="booknow"><a href="Book Now.html">Book Now</a></div>
+      <div id="register"><a href="login.html">Login/Register</a></div>
+    </div>
+
+    <main>
+        <section class="book-now-hero">
+            <h1>Plan Your Perfect Event</h1>
+            <p>Fill out the form below to get started with your event planning journey</p>
+        </section>
+
+        <section class="booking-form-container">
+            <div class="form-tabs">
+                <button class="tab-btn active" data-tab="wedding">Event Booking</button>
+            </div>
+
+            <form id="bookingForm" class="booking-form">
+                <div class="form-group">
+                    <label for="eventType">Event Type</label>
+                    <select id="eventType" required>
+                        <option value="">Select Event Type</option>
+                        <option value="wedding">Reception Hall</option>
+                        <option value="engagement">Social Event</option>
+                        <option value="birthday">Sea Side</option>
+                        <option value="anniversary">Entertainment</option>
+                        <option value="corporate">Birthday Party</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="eventDate">Event Date</label>
+                    <input type="date" id="eventDate" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="guestCount">Estimated Guest Count</label>
+                    <input type="number" placeholder="Ex. 500" id="guestCount" min="10" max="800" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="venueType">Venue Preference</label>
+                    <select id="venueType">
+                        <option value="ballroom">Party</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="services">Services Needed (Select all that apply)</label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="services" value="catering"> Catering</label>
+                        <label><input type="checkbox" name="services" value="decorations"> Decorations</label>
+                        <label><input type="checkbox" name="services" value="entertainment"> Entertainment</label>
+                        <label><input type="checkbox" name="services" value="photography"> Photography</label>
+                        <label><input type="checkbox" name="services" value="videography"> Videography</label>
+                        <label><input type="checkbox" name="services" value="planning"> Full Planning</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="budget">Estimated Budget Including Services Needed (₱)</label>
+                    <select id="budget">
+                        <option value="">Select Budget Range</option>
+                        <option value="1000-5000">₱50,000 - ₱100,000</option>
+                        <option value="5000-10000">₱150,000 - ₱200,000</option>
+                        <option value="10000-25000">₱250,000 - ₱300,000</option>
+                        <option value="25000-50000">₱350,000 - ₱400,000</option>
+                        <option value="50000+">₱450,000+</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text"  placeholder="Ex. Juan D. Dela Cruz" id="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email"  placeholder="Ex. celerfect@gmail.com" id="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel"  placeholder="Ex. 12345678910" id="phone" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Additional Information</label>
+                    <textarea id="message" rows="4"></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Submit Booking Request</button>
+            </form>
+        </section>
+
+        <section class="booking-confirmation" id="confirmation" style="display: none;">
+            <div class="confirmation-content">
+                <i class="fas fa-check-circle"></i>
+                <h2>Thank You for Your Booking Request!</h2>
+                <p>We've received your event details and our team will contact you within 24 hours to discuss your event.</p>
+                <button id="newBookingBtn" class="submit-btn">Make Another Booking</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>CelerFect</h3>
+                <p>Making your special moments unforgettable and making it a perfect celebration since 2023.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="FINAL PROJECT.html">Home</a></li>
+                    <li><a href="inquire.html">Inquiries</a></li>
+                    <li><a href="Book Now.html">Book Now</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>celerfect@gmail.com</p>
+                <p>(555) 123-4567</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 CelerFect. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="Book Now.js"></script>
+</body>
+</html>

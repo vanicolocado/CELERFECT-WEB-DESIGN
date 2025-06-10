@@ -1,0 +1,156 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Event Planner | Book Your Event</title> 
+    <link rel="stylesheet" href="Book Now.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Link to Font Awesome icons -->
+</head>
+<body>
+    <header>
+        <!-- Empty header, can be used for logo or page heading -->
+    </header>
+
+    <div class="NavigationContainer"> <!-- Navigation bar container -->
+      <div id="home"><a href="FINAL PROJECT.html">Home</a></div> <!-- Link to Home page -->
+      <div id="inquire"><a href="inquire.html">Inquire</a></div> <!-- Link to Inquire page -->
+      <div id="venues"><a href="venue2.html">Venues</a></div> <!-- Link to Venues page -->
+      <div id="booknow"><a href="Book Now.html">Book Now</a></div> <!-- Link to current Book Now page -->
+
+      <div id="register"><a href="login.html">Login/Register</a></div> <!-- Link for user login or registration -->
+    </div>
+
+    <main>
+        <section class="book-now-hero"> <!-- Hero section at top of booking page -->
+            <h1>Plan Your Perfect Event</h1> <!-- Main heading -->
+            <p>Fill out the form below to get started with your event planning journey</p> <!-- Intro paragraph -->
+        </section>
+
+        <section class="booking-form-container"> <!-- Container for booking form -->
+            <div class="form-tabs"> <!-- Tabs for form (only one tab here) -->
+                <button class="tab-btn active" data-tab="wedding">Event Booking</button> <!-- Active tab button -->
+            </div>
+
+            <form id="bookingForm" class="booking-form"> <!-- Booking form start -->
+                <div class="form-group"> <!-- Group for event type selection -->
+                    <label for="eventType">Event Type</label> <!-- Label for event type -->
+                    <select id="eventType" required> <!-- Dropdown for event types, required -->
+                        <option value="">Select Event Type</option> <!-- Default blank option -->
+                        <option value="wedding">Reception Hall</option> <!-- Wedding option -->
+                        <option value="engagement">Social Event</option> <!-- Engagement option -->
+                        <option value="birthday">Sea Side</option> <!-- Birthday option -->
+                        <option value="anniversary">Entertainment</option> <!-- Anniversary option -->
+                        <option value="corporate">Birthday Party</option> <!-- Corporate option -->
+                        <option value="other">Other</option> <!-- Other option -->
+                    </select>
+                </div>
+
+                <div class="form-group"> <!-- Group for event date -->
+                    <label for="eventDate">Event Date</label> <!-- Label for date input -->
+                    <input type="date" id="eventDate" required> <!-- Date picker, required -->
+                </div>
+
+                <div class="form-group"> <!-- Group for guest count -->
+                    <label for="guestCount">Estimated Guest Count</label> <!-- Label for guest count -->
+                    <input type="number" placeholder="Ex. 500" id="guestCount" min="10" max="800" required> <!-- Number input with min/max and placeholder -->
+                </div>
+
+                <div class="form-group"> <!-- Group for venue preference -->
+                    <label for="venueType">Venue Preference</label> <!-- Label for venue dropdown -->
+                    <select id="venueType"> <!-- Dropdown for venue types -->
+                        <option value="">We need help choosing</option> <!-- Default blank option -->
+                        <option value="indoor">Reception Hall</option> <!-- Indoor venue -->
+                        <option value="outdoor">Social Event</option> <!-- Outdoor venue -->
+                        <option value="beach">Beach</option> <!-- Beach venue -->
+                        <option value="garden">Entertainment</option> <!-- Garden venue -->
+                        <option value="ballroom">Party</option> <!-- Ballroom venue -->
+                    </select>
+                </div>
+
+                <div class="form-group"> <!-- Group for services checkboxes -->
+                    <label for="services">Services Needed (Select all that apply)</label> <!-- Label for services -->
+                    <div class="checkbox-group"> <!-- Container for checkboxes -->
+                        <label><input type="checkbox" name="services" value="catering"> Catering</label> <!-- Catering option -->
+                        <label><input type="checkbox" name="services" value="decorations"> Decorations</label> <!-- Decorations option -->
+                        <label><input type="checkbox" name="services" value="entertainment"> Entertainment</label> <!-- Entertainment option -->
+                        <label><input type="checkbox" name="services" value="photography"> Photography</label> <!-- Photography option -->
+                        <label><input type="checkbox" name="services" value="videography"> Videography</label> <!-- Videography option -->
+                        <label><input type="checkbox" name="services" value="planning"> Full Planning</label> <!-- Full planning option -->
+                    </div>
+                </div>
+
+                <div class="form-group"> <!-- Group for budget selection -->
+                    <label for="budget">Estimated Budget Including Services Needed (₱)</label> <!-- Label for budget dropdown -->
+                    <select id="budget"> <!-- Dropdown for budget ranges -->
+                        <option value="">Select Budget Range</option> <!-- Default blank option -->
+                        <option value="1000-5000">₱50,000 - ₱100,000</option> <!-- Budget option 1 -->
+                        <option value="5000-10000">₱150,000 - ₱200,000</option> <!-- Budget option 2 -->
+                        <option value="10000-25000">₱250,000 - ₱300,000</option> <!-- Budget option 3 -->
+                        <option value="25000-50000">₱350,000 - ₱400,000</option> <!-- Budget option 4 -->
+                        <option value="50000+">₱450,000+</option> <!-- Budget option 5 -->
+                    </select>
+                </div>
+
+                <div class="form-group"> <!-- Group for full name input -->
+                    <label for="name">Full Name</label> <!-- Label for name -->
+                    <input type="text"  placeholder="Ex. Juan D. Dela Cruz" id="name" required> <!-- Text input with placeholder and required -->
+                </div>
+
+                <div class="form-group"> <!-- Group for email input -->
+                    <label for="email">Email</label> <!-- Label for email -->
+                    <input type="email"  placeholder="Ex. celerfect@gmail.com" id="email" required> <!-- Email input with placeholder and required -->
+                </div>
+
+                <div class="form-group"> <!-- Group for phone input -->
+                    <label for="phone">Phone Number</label> <!-- Label for phone -->
+                    <input type="tel"  placeholder="Ex. 12345678910" id="phone" required> <!-- Telephone input with placeholder and required -->
+                </div>
+
+                <div class="form-group"> <!-- Group for additional info textarea -->
+                    <label for="message">Additional Information</label> <!-- Label for message -->
+                    <textarea id="message" rows="4"></textarea> <!-- Textarea input with 4 rows -->
+                </div>
+
+                <button type="submit" class="submit-btn">Submit Booking Request</button> <!-- Submit button for the form -->
+            </form>
+        </section>
+
+        <section class="booking-confirmation" id="confirmation" style="display: none;"> <!-- Confirmation message container, hidden by default -->
+            <div class="confirmation-content">
+                <i class="fas fa-check-circle"></i> <!-- Font Awesome check icon -->
+                <h2>Thank You for Your Booking Request!</h2> <!-- Confirmation heading -->
+                <p>We've received your event details and our team will contact you within 24 hours to discuss your event.</p> <!-- Confirmation message -->
+                <button id="newBookingBtn" class="submit-btn">Make Another Booking</button> <!-- Button to reset form and book again -->
+            </div>
+        </section>
+    </main>
+
+    <footer> <!-- Footer at bottom of page -->
+        <div class="footer-content"> <!-- Footer main content area -->
+            <div class="footer-section"> <!-- Company info section -->
+                <h3>CelerFect</h3> <!-- Company name -->
+                <p>Making your special moments unforgettable and making it a perfect celebration since 2023.</p> <!-- Company slogan -->
+            </div>
+            <div class="footer-section"> <!-- Quick links section -->
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="FINAL PROJECT.html">Home</a></li> <!-- Home link -->
+                    <li><a href="inquire.html">Inquiries</a></li> <!-- Services link -->
+                    <li><a href="Book Now.html">Book Now</a></li> <!-- Book Now link -->
+                </ul>
+            </div>
+            <div class="footer-section"> <!-- Contact info section -->
+                <h3>Contact Us</h3>
+                <p>celerfect@gmail.com</p> <!-- Email contact -->
+                <p>(555) 123-4567</p> <!-- Phone contact -->
+            </div>
+        </div>
+        <div class="footer-bottom"> <!-- Footer copyright -->
+            <p>&copy; 2023 CelerFect. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="Book Now.js"></script> <!-- Link to your JavaScript file -->
+</body>
+</html>
